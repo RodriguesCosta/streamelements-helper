@@ -14,8 +14,23 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+    lang="pt-BR"
+    data-theme="dark"
+    className={`${inter.className} font-sans`}
+    >
+      <head>
+        <meta charSet="UTF-8" />
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+      </head>
+
+      <body className="antialiased">
+        {children}
+      </body>
     </html>
   )
 }
