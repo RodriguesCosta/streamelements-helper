@@ -33,6 +33,9 @@ export async function GET(request: NextRequest) {
         }      
       )
     }
+
+    console.log(`Aguardando 5 segundos para evitar rate limit`);
+    await new Promise(resolve => setTimeout(resolve, 5000));
   }
 
   return NextResponse.json({
