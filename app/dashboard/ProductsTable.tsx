@@ -43,6 +43,14 @@ export const ProductsTable: React.FC = () => {
               >
                 Baixar Lista
               </Link>
+
+              <Link
+                className="btn btn-xs btn-error"
+                href={`/api/stream-elements/all-to-back?name=${product.name}`}
+                target='_blank'
+              >
+                Devolver Tudo
+              </Link>
             </th>
           </tr>
         ))}
